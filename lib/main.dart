@@ -40,7 +40,7 @@ class _AuthState extends State<Auth> {
     emailController.addListener(
       () => _email = emailController.text,
     );
-    emailController.addListener(
+    passwordController.addListener(
       () => _password = passwordController.text,
     );
   }
