@@ -1,8 +1,16 @@
+import 'package:dijital_kitap/widgets/auth/auth_button.dart';
+import 'package:dijital_kitap/widgets/auth/styled_container.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:provider/provider.dart';
+
+import 'providers/switch_screen.dart';
+import 'widgets/auth/email_field.dart';
+import 'widgets/auth/password_field.dart';
+import 'widgets/auth/rotated_text.dart';
+import 'widgets/auth/slogan_text.dart';
+import 'widgets/auth/switch_screen_text.dart';
+import 'widgets/auth/title_text.dart';
 
 void main() => runApp(DijitalKitap());
 
@@ -23,19 +31,6 @@ class DijitalKitap extends StatelessWidget {
         ),
       ),
     );
-  }
-}
-
-class SwitchScreen with ChangeNotifier {
-  bool _isSignIn = true;
-
-  bool get isSignIn {
-    return _isSignIn;
-  }
-
-  void switchAuth() {
-    _isSignIn = !isSignIn;
-    notifyListeners();
   }
 }
 
@@ -68,187 +63,20 @@ class _AuthState extends State<Auth> {
     passwordController.dispose();
   }
 
-  void _signIn(String email, String password, BuildContext ctx) async {
-    try {
-      await FirebaseAuth.instance.signInWithEmailAndPassword(
-        email: email,
-        password: password,
-      );
-      User user = FirebaseAuth.instance.currentUser;
-    } catch (e) {
-      Scaffold.of(ctx).showSnackBar(
-        SnackBar(
-          content: Text(e.message),
-        ),
-      );
-    }
-  }
-
-  void _signUp(String email, String password, BuildContext ctx) async {
-    try {
-      await FirebaseAuth.instance.createUserWithEmailAndPassword(
-        email: email,
-        password: password,
-      );
-      User user = FirebaseAuth.instance.currentUser;
-    } catch (e) {
-      Scaffold.of(ctx).showSnackBar(
-        SnackBar(
-          content: Text(e.message),
-        ),
-      );
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
-    bool isSignIn = Provider.of<SwitchScreen>(context).isSignIn;
-    void _switchAuth =
-        Provider.of<SwitchScreen>(context, listen: false).switchAuth;
-    final double width = MediaQuery.of(context).size.width;
-    final double height = MediaQuery.of(context).size.height;
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Builder(
-          builder: (context) => Container(
-            height: height,
-            width: width,
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topRight,
-                end: Alignment.bottomLeft,
-                colors: [
-                  Color.fromRGBO(28, 18, 18, 1),
-                  Color.fromRGBO(138, 135, 135, 1),
-                ],
-              ),
-            ),
-            child: Stack(
-              children: [
-                Positioned(
-                  left: width / 17,
-                  top: height / 10,
-                  child: RotatedBox(
-                    quarterTurns: 3,
-                    child: Text(
-                      isSignIn ? 'giriş yap' : 'kaydol',
-                      style: TextStyle(color: Colors.white38, fontSize: 50),
-                    ),
-                  ),
-                ),
-                Positioned(
-                  left: width / 3,
-                  top: 20 * height / 100,
-                  child: Text(
-                    'dijital kitap',
-                    style: TextStyle(color: Colors.white, fontSize: 40),
-                  ),
-                ),
-                Positioned(
-                  left: width / 3,
-                  top: 26 * height / 100,
-                  child: Text(
-                    'okumanın yeni yolu',
-                    style: TextStyle(color: Colors.white54, fontSize: 20),
-                  ),
-                ),
-                EmailField(width, height, emailController),
-                PasswordField(width, height, passwordController),
-                Positioned(
-                  left: 20 * width / 24,
-                  top: 80 * height / 100,
-                  child: IconButton(
-                    icon: Icon(Icons.arrow_forward_ios,
-                        color: Colors.white70, size: 30),
-                    onPressed: isSignIn
-                        ? () => _signIn(_email, _password, context)
-                        : () => _signUp(_email, _password, context),
-                  ),
-                ),
-                Positioned(
-                  left: 9 * width / 24,
-                  top: 90 * height / 100,
-                  child: RichText(
-                    text: TextSpan(
-                      text: isSignIn
-                          ? 'hesabın yok mu? hemen kaydol!'
-                          : 'zaten hesabın var mı ? giriş yap!',
-                      style: TextStyle(
-                        color: Colors.white70,
-                        fontSize: 17,
-                      ),
-                      recognizer: TapGestureRecognizer()
-                        ..onTap = () => _switchAuth,
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class EmailField extends StatelessWidget {
-  const EmailField(this.width, this.height, this.controller, {Key key})
-      : super(key: key);
-
-  final double width;
-  final double height;
-  final TextEditingController controller;
-
-  @override
-  Widget build(BuildContext context) {
-    return Positioned(
-      top: 60 * height / 100,
-      left: width / 15,
-      width: width,
-      child: Container(
-        margin: EdgeInsets.fromLTRB(width / 5, 0, width / 5, 0),
-        child: TextField(
-          controller: controller,
-          style: TextStyle(color: Colors.white, fontSize: 25),
-          keyboardType: TextInputType.emailAddress,
-          decoration: InputDecoration(
-            hintText: 'email',
-            hintStyle: TextStyle(color: Colors.white70, fontSize: 25),
-            border: InputBorder.none,
-            isDense: true,
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class PasswordField extends StatelessWidget {
-  const PasswordField(this.width, this.height, this.controller, {Key key})
-      : super(key: key);
-
-  final double width;
-  final double height;
-  final TextEditingController controller;
-
-  @override
-  Widget build(BuildContext context) {
-    return Positioned(
-      top: 60 * height / 100 + 100,
-      left: width / 15,
-      width: width,
-      child: Container(
-        margin: EdgeInsets.fromLTRB(width / 5, 0, width / 5, 0),
-        child: TextField(
-          controller: controller,
-          style: TextStyle(color: Colors.white, fontSize: 25),
-          decoration: InputDecoration(
-            hintText: 'şifre',
-            hintStyle: TextStyle(color: Colors.white70, fontSize: 25),
-            border: InputBorder.none,
-            isDense: true,
-          ),
-          obscureText: true,
+      body: StyledContainer(
+        Stack(
+          children: [
+            RotatedText(),
+            TitleText(),
+            SloganText(),
+            EmailField(emailController),
+            PasswordField(passwordController),
+            AuthButton(_email, _password),
+            SwitchScreenText(),
+          ],
         ),
       ),
     );
