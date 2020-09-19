@@ -1,3 +1,4 @@
+import 'package:dijital_kitap/screens/first_time.dart';
 import 'package:dijital_kitap/screens/home.dart';
 
 import '../../providers/auth_provider.dart';
@@ -45,7 +46,7 @@ class AuthButton extends StatelessWidget {
       User user = FirebaseAuth.instance.currentUser;
       Navigator.of(ctx).pushAndRemoveUntil(
         MaterialPageRoute(
-          builder: (_) => Home(),
+          builder: (_) => FirstTime(user),
         ),
         (route) => false,
       );
