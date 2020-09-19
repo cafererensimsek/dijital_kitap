@@ -1,12 +1,15 @@
+import '../../providers/auth_provider.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class EmailField extends StatelessWidget {
-  const EmailField(this.controller);
-
-  final TextEditingController controller;
+  final emailController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
+    emailController.addListener(() =>
+        Provider.of<AuthProvider>(context, listen: false)
+            .changeEmail(emailController.text));
     final double width = MediaQuery.of(context).size.width;
     final double height = MediaQuery.of(context).size.height;
     return Positioned(
@@ -16,7 +19,7 @@ class EmailField extends StatelessWidget {
       child: Container(
         margin: EdgeInsets.fromLTRB(width / 5, 0, width / 5, 0),
         child: TextField(
-          controller: controller,
+          controller: emailController,
           style: TextStyle(color: Colors.white, fontSize: 25),
           keyboardType: TextInputType.emailAddress,
           decoration: InputDecoration(

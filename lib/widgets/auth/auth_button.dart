@@ -6,11 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class AuthButton extends StatelessWidget {
-  final String email;
-  final String password;
-
-  AuthButton(this.email, this.password);
-
   void _signIn(String email, String password, BuildContext ctx) async {
     try {
       await FirebaseAuth.instance.signInWithEmailAndPassword(
@@ -20,7 +15,7 @@ class AuthButton extends StatelessWidget {
       User user = FirebaseAuth.instance.currentUser;
       Navigator.of(ctx).pushAndRemoveUntil(
         MaterialPageRoute(
-          builder: (_) => Home(user),
+          builder: (_) => Home(),
         ),
         (route) => false,
       );
@@ -50,7 +45,7 @@ class AuthButton extends StatelessWidget {
       User user = FirebaseAuth.instance.currentUser;
       Navigator.of(ctx).pushAndRemoveUntil(
         MaterialPageRoute(
-          builder: (_) => Home(user),
+          builder: (_) => Home(),
         ),
         (route) => false,
       );
@@ -76,14 +71,16 @@ class AuthButton extends StatelessWidget {
     final double width = MediaQuery.of(context).size.width;
     final double height = MediaQuery.of(context).size.height;
     bool isSignIn = Provider.of<AuthProvider>(context).isSignIn;
+    String _email = Provider.of<AuthProvider>(context).email;
+    String _password = Provider.of<AuthProvider>(context).password;
     return Positioned(
       left: 20 * width / 24,
       top: 80 * height / 100,
       child: IconButton(
         icon: Icon(Icons.arrow_forward_ios, color: Colors.white70, size: 30),
         onPressed: isSignIn
-            ? () => _signIn(email, password, context)
-            : () => _signUp(email, password, context),
+            ? () => _signIn(_email, _password, context)
+            : () => _signUp(_email, _password, context),
       ),
     );
   }

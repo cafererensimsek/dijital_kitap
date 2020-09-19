@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class StyledContainer extends StatelessWidget {
-  final Widget stack;
+  final Widget child;
 
-  const StyledContainer(this.stack);
+  const StyledContainer({this.child});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class StyledContainer extends StatelessWidget {
               ],
             ),
           ),
-          child: stack,
+          child: child,
         ),
       ),
     );

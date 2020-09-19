@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 
 import 'providers/auth_provider.dart';
 import 'screens/auth.dart';
+import 'screens/home.dart';
 
 void main() => runApp(DijitalKitap());
 
@@ -19,13 +20,19 @@ class DijitalKitap extends StatelessWidget {
           primaryColor: Color.fromRGBO(28, 18, 18, 1),
           accentColor: Color.fromRGBO(138, 135, 135, 1),
         ),
-        home: FutureBuilder(
-          future: Firebase.initializeApp(),
-          builder: (context, snapshot) =>
-              snapshot.connectionState == ConnectionState.done
-                  ? Auth()
-                  : Center(child: CircularProgressIndicator()),
-        ),
+        routes: {
+          '/': (context) => FutureBuilder(
+                future: Firebase.initializeApp(),
+                builder: (context, snapshot) =>
+                    snapshot.connectionState == ConnectionState.done
+                        ? Auth()
+                        : Center(
+                            child: CircularProgressIndicator(),
+                          ),
+              ),
+          '/home': (context) => Home(),
+        },
+        initialRoute: '/',
       ),
     );
   }
