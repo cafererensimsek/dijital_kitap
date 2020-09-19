@@ -2,23 +2,40 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:provider/provider.dart';
 
 void main() => runApp(DijitalKitap());
 
 class DijitalKitap extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'DijitalKitap',
-      debugShowCheckedModeBanner: false,
-      home: FutureBuilder(
-        future: Firebase.initializeApp(),
-        builder: (context, snapshot) =>
-            snapshot.connectionState == ConnectionState.done
-                ? Auth()
-                : Center(child: CircularProgressIndicator()),
+    return ChangeNotifierProvider(
+      create: (context) => SwitchScreen(),
+      child: MaterialApp(
+        title: 'DijitalKitap',
+        debugShowCheckedModeBanner: false,
+        home: FutureBuilder(
+          future: Firebase.initializeApp(),
+          builder: (context, snapshot) =>
+              snapshot.connectionState == ConnectionState.done
+                  ? Auth()
+                  : Center(child: CircularProgressIndicator()),
+        ),
       ),
     );
+  }
+}
+
+class SwitchScreen with ChangeNotifier {
+  bool _isSignIn = true;
+
+  bool get isSignIn {
+    return _isSignIn;
+  }
+
+  void switchAuth() {
+    _isSignIn = !isSignIn;
+    notifyListeners();
   }
 }
 
@@ -30,7 +47,6 @@ class Auth extends StatefulWidget {
 class _AuthState extends State<Auth> {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
-  bool isSignIn = true;
   String _email;
   String _password;
 
@@ -59,7 +75,6 @@ class _AuthState extends State<Auth> {
         password: password,
       );
       User user = FirebaseAuth.instance.currentUser;
-      print(user);
     } catch (e) {
       Scaffold.of(ctx).showSnackBar(
         SnackBar(
@@ -76,7 +91,6 @@ class _AuthState extends State<Auth> {
         password: password,
       );
       User user = FirebaseAuth.instance.currentUser;
-      print(user);
     } catch (e) {
       Scaffold.of(ctx).showSnackBar(
         SnackBar(
@@ -86,14 +100,11 @@ class _AuthState extends State<Auth> {
     }
   }
 
-  void _switchAuth() {
-    setState(() {
-      isSignIn = !isSignIn;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
+    bool isSignIn = Provider.of<SwitchScreen>(context).isSignIn;
+    void _switchAuth =
+        Provider.of<SwitchScreen>(context, listen: false).switchAuth;
     final double width = MediaQuery.of(context).size.width;
     final double height = MediaQuery.of(context).size.height;
     return Scaffold(
@@ -166,7 +177,8 @@ class _AuthState extends State<Auth> {
                         color: Colors.white70,
                         fontSize: 17,
                       ),
-                      recognizer: TapGestureRecognizer()..onTap = _switchAuth,
+                      recognizer: TapGestureRecognizer()
+                        ..onTap = () => _switchAuth,
                     ),
                   ),
                 ),
