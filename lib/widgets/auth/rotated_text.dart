@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../providers/switch_screen.dart';
+import '../../providers/auth_provider.dart';
 
 class RotatedText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final bool isSignIn = Provider.of<SwitchScreen>(context).isSignIn;
+    final bool isSignIn = Provider.of<AuthProvider>(context).isSignIn;
     final double width = MediaQuery.of(context).size.width;
     final double height = MediaQuery.of(context).size.height;
     return Positioned(

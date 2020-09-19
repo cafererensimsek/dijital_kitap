@@ -19,8 +19,8 @@ class StyledContainer extends StatelessWidget {
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
               colors: [
-                Color.fromRGBO(28, 18, 18, 1),
-                Color.fromRGBO(138, 135, 135, 1),
+                Theme.of(context).primaryColor,
+                Theme.of(context).accentColor,
               ],
             ),
           ),

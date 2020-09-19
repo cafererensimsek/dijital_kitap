@@ -1,4 +1,6 @@
-import '../../providers/switch_screen.dart';
+import 'package:dijital_kitap/screens/home.dart';
+
+import '../../providers/auth_provider.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -16,10 +18,24 @@ class AuthButton extends StatelessWidget {
         password: password,
       );
       User user = FirebaseAuth.instance.currentUser;
+      Navigator.of(ctx).pushAndRemoveUntil(
+        MaterialPageRoute(
+          builder: (_) => Home(user),
+        ),
+        (route) => false,
+      );
     } catch (e) {
       Scaffold.of(ctx).showSnackBar(
         SnackBar(
-          content: Text(e.message),
+          behavior: SnackBarBehavior.floating,
+          content: Row(
+            children: [
+              Icon(Icons.error),
+              SizedBox(width: 30),
+              Flexible(
+                  child: Text(e.message != null ? e.message : e.toString())),
+            ],
+          ),
         ),
       );
     }
@@ -32,10 +48,24 @@ class AuthButton extends StatelessWidget {
         password: password,
       );
       User user = FirebaseAuth.instance.currentUser;
+      Navigator.of(ctx).pushAndRemoveUntil(
+        MaterialPageRoute(
+          builder: (_) => Home(user),
+        ),
+        (route) => false,
+      );
     } catch (e) {
       Scaffold.of(ctx).showSnackBar(
         SnackBar(
-          content: Text(e.message),
+          behavior: SnackBarBehavior.floating,
+          content: Row(
+            children: [
+              Icon(Icons.error),
+              SizedBox(width: 30),
+              Flexible(
+                  child: Text(e.message != null ? e.message : e.toString())),
+            ],
+          ),
         ),
       );
     }
@@ -45,7 +75,7 @@ class AuthButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final double width = MediaQuery.of(context).size.width;
     final double height = MediaQuery.of(context).size.height;
-    bool isSignIn = Provider.of<SwitchScreen>(context).isSignIn;
+    bool isSignIn = Provider.of<AuthProvider>(context).isSignIn;
     return Positioned(
       left: 20 * width / 24,
       top: 80 * height / 100,
