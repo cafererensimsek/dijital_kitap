@@ -9,8 +9,8 @@ void main() => runApp(DijitalKitap());
 class DijitalKitap extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => AuthProvider(),
+    return ChangeNotifierProvider.value(
+      value: AuthProvider(),
       child: MaterialApp(
         title: 'DijitalKitap',
         debugShowCheckedModeBanner: false,
