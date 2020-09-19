@@ -46,7 +46,7 @@ class AuthButton extends StatelessWidget {
       User user = FirebaseAuth.instance.currentUser;
       Navigator.of(ctx).pushAndRemoveUntil(
         MaterialPageRoute(
-          builder: (_) => FirstTime(user),
+          builder: (_) => Home(),
         ),
         (route) => false,
       );

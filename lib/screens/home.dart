@@ -7,6 +7,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   int _selectedIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,11 +30,11 @@ class _HomeState extends State<Home> {
             title: Text('1'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
+            icon: Icon(Icons.search),
             title: Text('1'),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
+            icon: Icon(Icons.person),
             title: Text('1'),
           ),
           BottomNavigationBarItem(
