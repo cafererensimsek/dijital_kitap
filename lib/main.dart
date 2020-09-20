@@ -1,7 +1,9 @@
+import 'package:dijital_kitap/providers/home_provider.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'providers/auth_provider.dart';
+import 'providers/book_provider.dart';
 import 'screens/auth.dart';
 
 void main() => runApp(DijitalKitap());
@@ -9,8 +11,18 @@ void main() => runApp(DijitalKitap());
 class DijitalKitap extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider.value(
-      value: AuthProvider(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider.value(
+          value: AuthProvider(),
+        ),
+        ChangeNotifierProvider.value(
+          value: Books(),
+        ),
+        ChangeNotifierProvider.value(
+          value: HomeProvider(),
+        ),
+      ],
       child: MaterialApp(
         title: 'DijitalKitap',
         debugShowCheckedModeBanner: false,
