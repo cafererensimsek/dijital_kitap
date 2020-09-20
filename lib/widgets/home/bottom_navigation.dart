@@ -22,10 +22,6 @@ class BottomNavigation extends StatelessWidget {
           title: Text('1'),
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.search),
-          title: Text('1'),
-        ),
-        BottomNavigationBarItem(
           icon: Icon(Icons.person),
           title: Text('1'),
         ),
