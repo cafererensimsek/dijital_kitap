@@ -7,7 +7,7 @@ class Books with ChangeNotifier {
   }
 
   void toggleFavorite(Book book) {
-    book.isFavorite = !(book.isFavorite);
+    book.isFavorite = !book.isFavorite;
     notifyListeners();
   }
 
