@@ -1,4 +1,3 @@
-import 'package:dijital_kitap/models/user.dart';
 import 'package:dijital_kitap/widgets/auth/styled_container.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -146,14 +145,9 @@ class _FirstTimeState extends State<FirstTime> {
                   alignment: Alignment.center,
                   child: FlatButton(
                     onPressed: () {
-                      if (_formKey.currentState.validate())
-                        DijiUser user = DijiUser(
-                          id: widget.user.email,
-                          name: 'Eren',
-                          surname: 'Şimşek',
-                          username: 'caferen',
-                          //dateOfBirth: null,
-                        );
+                      if (_formKey.currentState.validate()) {
+                        // create user
+                      }
                     },
                     child: Text(
                       'Kaydet',
