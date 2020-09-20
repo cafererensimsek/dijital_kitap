@@ -21,8 +21,20 @@ class BookTile extends StatelessWidget {
       child: GridTile(
         child: Padding(
           padding: const EdgeInsets.only(bottom: 50),
-          child: Image(
-            image: NetworkImage(bookList[index].avatar),
+          child: Image.network(
+            bookList[index].avatar,
+            errorBuilder: (_, __, ___) => Text('😢'),
+            loadingBuilder: (context, child, loadingProgress) {
+              if (loadingProgress == null) return child;
+              return Center(
+                child: CircularProgressIndicator(
+                  value: loadingProgress.expectedTotalBytes != null
+                      ? loadingProgress.cumulativeBytesLoaded /
+                          loadingProgress.expectedTotalBytes
+                      : null,
+                ),
+              );
+            },
           ),
         ),
         footer: GridTileBar(
