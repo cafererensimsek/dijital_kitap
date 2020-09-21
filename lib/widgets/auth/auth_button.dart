@@ -1,7 +1,7 @@
 import 'package:dijital_kitap/screens/first_time.dart';
 import 'package:dijital_kitap/screens/home.dart';
 
-import '../../providers/auth_provider.dart';
+import '../../providers/auth.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -71,9 +71,9 @@ class AuthButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final double width = MediaQuery.of(context).size.width;
     final double height = MediaQuery.of(context).size.height;
-    bool isSignIn = Provider.of<AuthProvider>(context).isSignIn;
-    String _email = Provider.of<AuthProvider>(context).email;
-    String _password = Provider.of<AuthProvider>(context).password;
+    bool isSignIn = Provider.of<Authentication>(context).isSignIn;
+    String _email = Provider.of<Authentication>(context).email;
+    String _password = Provider.of<Authentication>(context).password;
     return Positioned(
       left: 20 * width / 24,
       top: 80 * height / 100,

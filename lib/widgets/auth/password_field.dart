@@ -1,4 +1,4 @@
-import '../../providers/auth_provider.dart';
+import '../../providers/auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -8,7 +8,7 @@ class PasswordField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     passwordController.addListener(
-      () => Provider.of<AuthProvider>(context, listen: false)
+      () => Provider.of<Authentication>(context, listen: false)
           .changePassword(passwordController.text),
     );
     final double width = MediaQuery.of(context).size.width;

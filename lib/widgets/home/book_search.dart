@@ -1,5 +1,5 @@
-import 'package:dijital_kitap/models/book.dart';
-import 'package:dijital_kitap/providers/book_provider.dart';
+import 'package:dijital_kitap/providers/book.dart';
+import 'package:dijital_kitap/providers/books.dart';
 import 'package:dijital_kitap/widgets/auth/styled_container.dart';
 import 'package:dijital_kitap/widgets/home/book_details.dart';
 import 'package:flutter/material.dart';
@@ -35,26 +35,28 @@ class BookSearch extends SearchDelegate<Book> {
   @override
   Widget buildResults(BuildContext context) {
     List<Book> bookList = Provider.of<Books>(context).bookList;
-    final results =
-        bookList.where((b) => b.authorFirstName.toLowerCase().contains(query));
-    return ListView(
-      children: results
-          .map<Widget>(
-            (b) => ListTile(
-              onTap: () => Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (_) => BookDetails(b),
+    final results = bookList
+        .where((b) => b.authorFirstName.toLowerCase().startsWith(query));
+    return StyledContainer(
+      child: ListView(
+        children: results
+            .map<Widget>(
+              (b) => ListTile(
+                onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (_) => BookDetails(b),
+                  ),
+                ),
+                title: Text(
+                  '  ${b.authorFirstName}',
+                  style: TextStyle(
+                    color: Colors.white70,
+                  ),
                 ),
               ),
-              title: Text(
-                '  ${b.authorFirstName}',
-                style: TextStyle(
-                    //color: Colors.white70,
-                    ),
-              ),
-            ),
-          )
-          .toList(),
+            )
+            .toList(),
+      ),
     );
   }
 
@@ -62,34 +64,39 @@ class BookSearch extends SearchDelegate<Book> {
   Widget buildSuggestions(BuildContext context) {
     List<Book> bookList = Provider.of<Books>(context).bookList;
 
-    final results =
-        bookList.where((b) => b.authorFirstName.toLowerCase().contains(query));
+    final results = bookList
+        .where((b) => b.authorFirstName.toLowerCase().startsWith(query));
 
-    return query == ""
-        ? Center(
-            child: Text(
-              'Yüzlerce kitabı ara...',
-              style: TextStyle(fontSize: 20),
-            ),
-          )
-        : ListView(
-            children: results
-                .map<Widget>(
-                  (b) => ListTile(
-                    onTap: () => Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (_) => BookDetails(b),
+    return StyledContainer(
+      child: query == ""
+          ? Center(
+              child: Text(
+                'Yüzlerce kitabı ara...',
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.white70,
+                ),
+              ),
+            )
+          : ListView(
+              children: results
+                  .map<Widget>(
+                    (b) => ListTile(
+                      onTap: () => Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (_) => BookDetails(b),
+                        ),
+                      ),
+                      title: Text(
+                        '  ${b.authorFirstName}',
+                        style: TextStyle(
+                          color: Colors.white70,
+                        ),
                       ),
                     ),
-                    title: Text(
-                      '  ${b.authorFirstName}',
-                      style: TextStyle(
-                          //color: Colors.white70,
-                          ),
-                    ),
-                  ),
-                )
-                .toList(),
-          );
+                  )
+                  .toList(),
+            ),
+    );
   }
 }

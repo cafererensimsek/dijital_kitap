@@ -1,12 +1,12 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../providers/auth_provider.dart';
+import '../../providers/auth.dart';
 
 class SwitchScreenText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    bool isSignIn = Provider.of<AuthProvider>(context).isSignIn;
+    bool isSignIn = Provider.of<Authentication>(context).isSignIn;
     final double width = MediaQuery.of(context).size.width;
     final double height = MediaQuery.of(context).size.height;
 
@@ -24,7 +24,7 @@ class SwitchScreenText extends StatelessWidget {
           ),
           recognizer: TapGestureRecognizer()
             ..onTap =
-                Provider.of<AuthProvider>(context, listen: false).switchAuth,
+                Provider.of<Authentication>(context, listen: false).switchAuth,
         ),
       ),
     );

@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 
-class Book {
+class Book with ChangeNotifier {
   final int id;
   final String authorFirstName;
   final String authorLastName;
@@ -24,4 +24,9 @@ class Book {
     @required this.categories,
     this.isFavorite = false,
   });
+
+  void toggleFavorite(Book book) {
+    book.isFavorite = !book.isFavorite;
+    notifyListeners();
+  }
 }

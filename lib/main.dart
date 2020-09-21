@@ -2,8 +2,8 @@ import 'package:dijital_kitap/providers/home_provider.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'providers/auth_provider.dart';
-import 'providers/book_provider.dart';
+import 'providers/auth.dart';
+import 'providers/books.dart';
 import 'screens/auth.dart';
 
 void main() => runApp(DijitalKitap());
@@ -14,7 +14,7 @@ class DijitalKitap extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider.value(
-          value: AuthProvider(),
+          value: Authentication(),
         ),
         ChangeNotifierProvider.value(
           value: Books(),

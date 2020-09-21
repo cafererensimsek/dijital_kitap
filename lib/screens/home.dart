@@ -1,7 +1,8 @@
 import 'package:dijital_kitap/providers/home_provider.dart';
 import 'package:dijital_kitap/widgets/auth/styled_container.dart';
-import 'package:dijital_kitap/widgets/home/book_grid.dart';
+import 'package:dijital_kitap/widgets/home/all_books.dart';
 import 'package:dijital_kitap/widgets/home/bottom_navigation.dart';
+import 'package:dijital_kitap/widgets/home/favorites.dart';
 import 'package:dijital_kitap/widgets/home/search_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -13,7 +14,7 @@ class Home extends StatelessWidget {
         return BookGrid();
         break;
       case 1:
-        return StyledContainer();
+        return FavoritesGrid();
         break;
       case 2:
         return StyledContainer();

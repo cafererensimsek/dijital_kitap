@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class AuthProvider with ChangeNotifier {
+class Authentication with ChangeNotifier {
   bool _isSignIn = true;
   String _email;
   String _password;

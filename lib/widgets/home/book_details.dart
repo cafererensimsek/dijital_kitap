@@ -1,4 +1,4 @@
-import 'package:dijital_kitap/models/book.dart';
+import 'package:dijital_kitap/providers/book.dart';
 import 'package:dijital_kitap/widgets/auth/styled_container.dart';
 import 'package:flutter/material.dart';
 
