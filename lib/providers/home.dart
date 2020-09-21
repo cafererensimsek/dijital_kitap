@@ -1,6 +1,7 @@
-import 'package:dijital_kitap/widgets/auth/styled_container.dart';
 import 'package:dijital_kitap/widgets/home/all_books.dart';
 import 'package:dijital_kitap/widgets/home/favorites.dart';
+import 'package:dijital_kitap/widgets/home/profile.dart';
+import 'package:dijital_kitap/widgets/home/settings.dart';
 import 'package:flutter/cupertino.dart';
 
 class HomeProvider with ChangeNotifier {
@@ -24,10 +25,10 @@ class HomeProvider with ChangeNotifier {
         return FavoritesGrid();
         break;
       case 2:
-        return StyledContainer();
+        return Profile();
         break;
       default:
-        return StyledContainer();
+        return Settings();
     }
   }
 }
