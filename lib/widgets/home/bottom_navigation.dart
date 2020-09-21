@@ -1,4 +1,4 @@
-import 'package:dijital_kitap/providers/home_provider.dart';
+import 'package:dijital_kitap/providers/home.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

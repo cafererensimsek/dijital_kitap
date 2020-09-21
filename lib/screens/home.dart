@@ -1,4 +1,4 @@
-import 'package:dijital_kitap/providers/home_provider.dart';
+import 'package:dijital_kitap/providers/home.dart';
 import 'package:dijital_kitap/widgets/home/bottom_navigation.dart';
 import 'package:dijital_kitap/widgets/home/search_bar.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +9,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: SearchBar(),
-      body: Provider.of<HomeProvider>(context).homeBody(),
+      body: Provider.of<HomeProvider>(context).homeBody,
       bottomNavigationBar: BottomNavigation(),
     );
   }
