@@ -14,7 +14,7 @@ class BottomNavigation extends StatelessWidget {
       selectedItemColor: Theme.of(context).accentColor,
       currentIndex: _selectedIndex,
       onTap: (index) =>
-          Provider.of<HomeProvider>(context, listen: false).changeScreen(index),
+          Provider.of<HomeProvider>(context, listen: false).toggleIndex(index),
       items: [
         BottomNavigationBarItem(
           icon: Icon(Icons.home),

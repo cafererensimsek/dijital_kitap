@@ -10,7 +10,7 @@ class HomeProvider with ChangeNotifier {
     return _selectedIndex;
   }
 
-  void changeScreen(int index) {
+  void toggleIndex(int index) {
     _selectedIndex = index;
     notifyListeners();
   }
