@@ -1,5 +1,4 @@
 import 'package:dijital_kitap/providers/book.dart';
-import 'package:dijital_kitap/providers/books.dart';
 import 'package:dijital_kitap/widgets/home/book_details.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';

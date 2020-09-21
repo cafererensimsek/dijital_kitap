@@ -1,3 +1,6 @@
+import 'package:dijital_kitap/widgets/auth/styled_container.dart';
+import 'package:dijital_kitap/widgets/home/all_books.dart';
+import 'package:dijital_kitap/widgets/home/favorites.dart';
 import 'package:flutter/cupertino.dart';
 
 class HomeProvider with ChangeNotifier {
@@ -11,5 +14,21 @@ class HomeProvider with ChangeNotifier {
   void changeScreen(int index) {
     _selectedIndex = index;
     notifyListeners();
+  }
+
+  Widget homeBody() {
+    switch (index) {
+      case 0:
+        return BookGrid();
+        break;
+      case 1:
+        return FavoritesGrid();
+        break;
+      case 2:
+        return StyledContainer();
+        break;
+      default:
+        return StyledContainer();
+    }
   }
 }
