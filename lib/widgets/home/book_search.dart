@@ -11,6 +11,22 @@ class BookSearch extends SearchDelegate<Book> {
   BookSearch(this.context);
 
   @override
+  String get searchFieldLabel => 'Yüzlerce kitabı ara...';
+
+  @override
+  ThemeData appBarTheme(BuildContext context) {
+    assert(context != null);
+    final ThemeData theme = Theme.of(context).copyWith(
+      textTheme: TextTheme(headline6: TextStyle(color: Colors.white)),
+      inputDecorationTheme: InputDecorationTheme(
+        hintStyle: TextStyle(color: Colors.white70),
+      ),
+    );
+    assert(theme != null);
+    return theme;
+  }
+
+  @override
   List<Widget> buildActions(BuildContext context) {
     return [
       IconButton(
@@ -71,7 +87,7 @@ class BookSearch extends SearchDelegate<Book> {
       child: query == ""
           ? Center(
               child: Text(
-                'Yüzlerce kitabı ara...',
+                'Aradıkların burada görünecek.',
                 style: TextStyle(
                   fontSize: 20,
                   color: Colors.white70,
