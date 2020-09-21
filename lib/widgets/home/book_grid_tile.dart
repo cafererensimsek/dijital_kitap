@@ -10,7 +10,10 @@ class BookTile extends StatelessWidget {
     return GestureDetector(
       onTap: () => Navigator.of(context).push(
         MaterialPageRoute(
-          builder: (_) => BookDetails(book),
+          builder: (_) => ChangeNotifierProvider.value(
+            value: book,
+            child: BookDetails(),
+          ),
         ),
       ),
       child: GridTile(
@@ -33,7 +36,7 @@ class BookTile extends StatelessWidget {
           ),
         ),
         footer: GridTileBar(
-          backgroundColor: Colors.white38,
+          backgroundColor: Colors.black87,
           leading: IconButton(
             icon:
                 Icon(!book.isFavorite ? Icons.favorite_border : Icons.favorite),

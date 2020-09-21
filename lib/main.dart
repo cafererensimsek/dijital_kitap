@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'providers/auth.dart';
 import 'providers/books.dart';
+import 'providers/color.dart';
 import 'screens/auth.dart';
 
 void main() => runApp(DijitalKitap());
@@ -22,13 +23,17 @@ class DijitalKitap extends StatelessWidget {
         ChangeNotifierProvider.value(
           value: HomeProvider(),
         ),
+        ChangeNotifierProvider.value(
+          value: Renk(),
+        ),
       ],
       child: MaterialApp(
         title: 'DijitalKitap',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-          primaryColor: Color.fromRGBO(28, 18, 18, 1),
-          accentColor: Color.fromRGBO(138, 135, 135, 1),
+          primarySwatch: Colors.green,
+          accentColor: Colors.black,
+          textTheme: Typography.whiteMountainView,
         ),
         home: FutureBuilder(
           future: Firebase.initializeApp(),

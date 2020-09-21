@@ -1,3 +1,4 @@
+import 'package:dijital_kitap/providers/color.dart';
 import 'package:dijital_kitap/providers/home.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -6,32 +7,35 @@ class BottomNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     int _selectedIndex = Provider.of<HomeProvider>(context).index;
+    MaterialColor clr =
+        Provider.of<Renk>(context).determineColor(_selectedIndex);
     return BottomNavigationBar(
-      type: BottomNavigationBarType.fixed,
+      type: BottomNavigationBarType.shifting,
       backgroundColor: Theme.of(context).primaryColor,
-      selectedItemColor: Colors.white,
-      unselectedItemColor: Theme.of(context).accentColor,
-      showSelectedLabels: false,
-      showUnselectedLabels: false,
+      selectedItemColor: Theme.of(context).accentColor,
       currentIndex: _selectedIndex,
       onTap: (index) =>
           Provider.of<HomeProvider>(context, listen: false).changeScreen(index),
       items: [
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
-          title: Text('1'),
+          title: Text('Ana menü'),
+          backgroundColor: clr,
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.favorite),
-          title: Text('1'),
+          title: Text('Favoriler'),
+          backgroundColor: clr,
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.person),
-          title: Text('1'),
+          title: Text('Profil'),
+          backgroundColor: clr,
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.settings),
-          title: Text('1'),
+          title: Text('Ayarlar'),
+          backgroundColor: clr,
         ),
       ],
     );

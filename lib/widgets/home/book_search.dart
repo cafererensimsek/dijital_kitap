@@ -1,5 +1,7 @@
 import 'package:dijital_kitap/providers/book.dart';
 import 'package:dijital_kitap/providers/books.dart';
+import 'package:dijital_kitap/providers/color.dart';
+import 'package:dijital_kitap/providers/home.dart';
 import 'package:dijital_kitap/widgets/auth/styled_container.dart';
 import 'package:dijital_kitap/widgets/home/book_details.dart';
 import 'package:flutter/material.dart';
@@ -15,8 +17,12 @@ class BookSearch extends SearchDelegate<Book> {
 
   @override
   ThemeData appBarTheme(BuildContext context) {
+    int _selectedIndex = Provider.of<HomeProvider>(context).index;
+    MaterialColor clr =
+        Provider.of<Renk>(context).determineColor(_selectedIndex);
     assert(context != null);
     final ThemeData theme = Theme.of(context).copyWith(
+      primaryColor: clr,
       textTheme: TextTheme(headline6: TextStyle(color: Colors.white)),
       inputDecorationTheme: InputDecorationTheme(
         hintStyle: TextStyle(color: Colors.white70),
@@ -60,7 +66,10 @@ class BookSearch extends SearchDelegate<Book> {
               (b) => ListTile(
                 onTap: () => Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (_) => BookDetails(b),
+                    builder: (_) => ChangeNotifierProvider.value(
+                      value: b,
+                      child: BookDetails(),
+                    ),
                   ),
                 ),
                 title: Text(
@@ -100,7 +109,10 @@ class BookSearch extends SearchDelegate<Book> {
                     (b) => ListTile(
                       onTap: () => Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (_) => BookDetails(b),
+                          builder: (_) => ChangeNotifierProvider.value(
+                            value: b,
+                            child: BookDetails(),
+                          ),
                         ),
                       ),
                       title: Text(

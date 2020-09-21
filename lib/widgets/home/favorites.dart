@@ -10,8 +10,8 @@ class FavoritesGrid extends StatelessWidget {
   Widget build(BuildContext context) {
     List<Book> favorites = Provider.of<Books>(context).getFavorites;
     return StyledContainer(
-      child: ChangeNotifierProvider.value(
-        value: Books(),
+      child: ChangeNotifierProvider(
+        create: (_) => Books(),
         child: GridView.builder(
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
@@ -20,7 +20,7 @@ class FavoritesGrid extends StatelessWidget {
           itemBuilder: (context, index) {
             return ChangeNotifierProvider.value(
               value: favorites[index],
-              child: favorites.length > 0
+              child: favorites.isNotEmpty
                   ? Container(
                       decoration: BoxDecoration(
                         border: Border.all(
