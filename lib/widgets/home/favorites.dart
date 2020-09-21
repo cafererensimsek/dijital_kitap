@@ -20,17 +20,15 @@ class FavoritesGrid extends StatelessWidget {
           itemBuilder: (context, index) {
             return ChangeNotifierProvider.value(
               value: favorites[index],
-              child: favorites.isNotEmpty
-                  ? Container(
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Colors.transparent,
-                          width: 2,
-                        ),
-                      ),
-                      child: BookTile(),
-                    )
-                  : Center(child: Text('Burası boş')),
+              child: Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.transparent,
+                    width: 2,
+                  ),
+                ),
+                child: BookTile(),
+              ),
             );
           },
         ),

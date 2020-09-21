@@ -10,7 +10,6 @@ class BottomNavigation extends StatelessWidget {
     MaterialColor clr =
         Provider.of<Renk>(context).determineColor(_selectedIndex);
     return BottomNavigationBar(
-      type: BottomNavigationBarType.shifting,
       backgroundColor: Theme.of(context).primaryColor,
       selectedItemColor: Theme.of(context).accentColor,
       currentIndex: _selectedIndex,
