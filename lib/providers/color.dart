@@ -6,7 +6,7 @@ class Renk with ChangeNotifier {
     MaterialColor clr;
     switch (index) {
       case 0:
-        clr = Colors.brown;
+        clr = Colors.lightGreen;
         break;
       case 1:
         clr = Colors.red;

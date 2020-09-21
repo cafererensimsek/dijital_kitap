@@ -24,7 +24,12 @@ class DetailCard extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            Image(image: NetworkImage(book.avatar)),
+            Hero(
+              tag: book.avatar,
+              child: Image(
+                image: NetworkImage(book.avatar),
+              ),
+            ),
             Text(
               '${book.authorFirstName} ${book.authorLastName}',
               style: TextStyle(fontSize: 18),

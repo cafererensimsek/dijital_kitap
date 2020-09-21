@@ -11,7 +11,7 @@ class BookTile extends StatelessWidget {
       MaterialPageRoute(
         builder: (_) => ChangeNotifierProvider.value(
           value: book,
-          child: Hero(child: BookDetails(), tag: ,),
+          child: BookDetails(),
         ),
       ),
     );
