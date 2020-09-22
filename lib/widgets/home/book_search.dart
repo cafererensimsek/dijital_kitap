@@ -18,11 +18,11 @@ class BookSearch extends SearchDelegate<Book> {
   @override
   ThemeData appBarTheme(BuildContext context) {
     int _selectedIndex = Provider.of<HomeProvider>(context).index;
-    MaterialColor clr =
-        Provider.of<Renk>(context).determineColor(_selectedIndex);
+    MaterialColor color =
+        Provider.of<Renk>(context).determineColor(_selectedIndex)[0];
     assert(context != null);
     final ThemeData theme = Theme.of(context).copyWith(
-      primaryColor: clr,
+      primaryColor: color,
       textTheme: TextTheme(headline6: TextStyle(color: Colors.white)),
       inputDecorationTheme: InputDecorationTheme(
         hintStyle: TextStyle(color: Colors.white70),

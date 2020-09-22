@@ -13,13 +13,13 @@ class BookDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     final Book book = Provider.of<Book>(context);
     int _selectedIndex = Provider.of<HomeProvider>(context).index;
-    MaterialColor clr =
-        Provider.of<Renk>(context).determineColor(_selectedIndex);
+    MaterialColor color =
+        Provider.of<Renk>(context).determineColor(_selectedIndex)[0];
 
     return Scaffold(
       appBar: AppBar(
         title: Text(book.authorFirstName),
-        backgroundColor: clr,
+        backgroundColor: color,
       ),
       body: StyledContainer(
         child: Stack(

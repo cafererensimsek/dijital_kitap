@@ -8,8 +8,10 @@ import 'package:provider/provider.dart';
 class BookTile extends StatelessWidget {
   void seeDetails(BuildContext context, Book book) {
     Navigator.of(context).push(
-      MaterialPageRoute(
-        builder: (_) => ChangeNotifierProvider.value(
+      PageRouteBuilder(
+        transitionDuration: Duration(milliseconds: 800),
+        reverseTransitionDuration: Duration(milliseconds: 300),
+        pageBuilder: (_, __, ___) => ChangeNotifierProvider.value(
           value: book,
           child: BookDetails(),
         ),

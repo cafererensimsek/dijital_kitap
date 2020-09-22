@@ -13,10 +13,10 @@ class SearchBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     int _selectedIndex = Provider.of<HomeProvider>(context).index;
-    MaterialColor clr =
-        Provider.of<Renk>(context).determineColor(_selectedIndex);
+    MaterialColor color =
+        Provider.of<Renk>(context).determineColor(_selectedIndex)[0];
     return AppBar(
-      backgroundColor: clr,
+      backgroundColor: color,
       title: Text('Dijital Kitap'),
       actions: [
         IconButton(

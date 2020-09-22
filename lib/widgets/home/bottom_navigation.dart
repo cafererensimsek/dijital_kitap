@@ -7,8 +7,8 @@ class BottomNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     int _selectedIndex = Provider.of<HomeProvider>(context).index;
-    MaterialColor clr =
-        Provider.of<Renk>(context).determineColor(_selectedIndex);
+    MaterialColor color =
+        Provider.of<Renk>(context).determineColor(_selectedIndex)[0];
     return BottomNavigationBar(
       backgroundColor: Theme.of(context).primaryColor,
       selectedItemColor: Theme.of(context).accentColor,
@@ -19,22 +19,22 @@ class BottomNavigation extends StatelessWidget {
         BottomNavigationBarItem(
           icon: Icon(Icons.home),
           title: Text('Ana menü'),
-          backgroundColor: clr,
+          backgroundColor: color,
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.favorite),
           title: Text('Favoriler'),
-          backgroundColor: clr,
+          backgroundColor: color,
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.person),
           title: Text('Profil'),
-          backgroundColor: clr,
+          backgroundColor: color,
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.settings),
           title: Text('Ayarlar'),
-          backgroundColor: clr,
+          backgroundColor: color,
         ),
       ],
     );

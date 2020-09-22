@@ -14,7 +14,7 @@ class StyledContainer extends StatelessWidget {
     final double height = MediaQuery.of(context).size.height;
     int _selectedIndex = Provider.of<HomeProvider>(context).index;
     MaterialColor clr =
-        Provider.of<Renk>(context).determineColor(_selectedIndex);
+        Provider.of<Renk>(context).determineColor(_selectedIndex)[0];
     return SingleChildScrollView(
       child: Builder(
         builder: (context) => Container(

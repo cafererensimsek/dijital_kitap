@@ -1,4 +1,6 @@
 import 'package:dijital_kitap/providers/book.dart';
+import 'package:dijital_kitap/providers/color.dart';
+import 'package:dijital_kitap/providers/home.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -6,6 +8,8 @@ class DetailCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Book book = Provider.of<Book>(context);
+    int index = Provider.of<HomeProvider>(context).index;
+    MaterialColor color = Provider.of<Renk>(context).determineColor(index)[1];
     return Positioned(
       top: MediaQuery.of(context).size.height / 6,
       left: MediaQuery.of(context).size.width / 5,
@@ -17,7 +21,7 @@ class DetailCard extends StatelessWidget {
           gradient: LinearGradient(
             begin: Alignment.bottomRight,
             end: Alignment.topLeft,
-            colors: [Colors.green, Colors.black],
+            colors: [color, Colors.black],
           ),
           boxShadow: [BoxShadow(color: Colors.black, blurRadius: 5)],
         ),
