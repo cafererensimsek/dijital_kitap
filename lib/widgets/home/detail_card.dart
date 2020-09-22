@@ -51,6 +51,7 @@ class DetailCard extends StatelessWidget {
               child: Text(
                 book.description,
                 style: TextStyle(fontSize: 18),
+                textAlign: TextAlign.center,
               ),
             ),
           ],
