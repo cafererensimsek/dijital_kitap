@@ -10,6 +10,8 @@ class BookTile extends StatelessWidget {
     Navigator.push(
       context,
       PageRouteBuilder(
+        transitionDuration: Duration(milliseconds: 750),
+        reverseTransitionDuration: Duration(milliseconds: 400),
         fullscreenDialog: true,
         opaque: false,
         pageBuilder: (_, __, ___) => ChangeNotifierProvider.value(

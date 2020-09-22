@@ -70,6 +70,8 @@ class BookSearch extends SearchDelegate<Book> {
                   PageRouteBuilder(
                     fullscreenDialog: true,
                     opaque: false,
+                    transitionDuration: Duration(milliseconds: 750),
+                    reverseTransitionDuration: Duration(milliseconds: 400),
                     pageBuilder: (_, __, ___) => ChangeNotifierProvider.value(
                       value: b,
                       child: DetailCard(),
@@ -114,6 +116,9 @@ class BookSearch extends SearchDelegate<Book> {
                       onTap: () => Navigator.push(
                         context,
                         PageRouteBuilder(
+                          transitionDuration: Duration(milliseconds: 750),
+                          reverseTransitionDuration:
+                              Duration(milliseconds: 400),
                           fullscreenDialog: true,
                           opaque: false,
                           pageBuilder: (_, __, ___) =>
