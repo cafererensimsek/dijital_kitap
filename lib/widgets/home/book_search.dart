@@ -3,7 +3,7 @@ import 'package:dijital_kitap/providers/books.dart';
 import 'package:dijital_kitap/providers/color.dart';
 import 'package:dijital_kitap/providers/home.dart';
 import 'package:dijital_kitap/widgets/auth/styled_container.dart';
-import 'package:dijital_kitap/widgets/home/book_details.dart';
+import 'package:dijital_kitap/widgets/home/detail_card.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -63,11 +63,14 @@ class BookSearch extends SearchDelegate<Book> {
         children: results
             .map<Widget>(
               (b) => ListTile(
-                onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (_) => ChangeNotifierProvider.value(
+                onTap: () => Navigator.push(
+                  context,
+                  PageRouteBuilder(
+                    fullscreenDialog: true,
+                    opaque: false,
+                    pageBuilder: (_, __, ___) => ChangeNotifierProvider.value(
                       value: b,
-                      child: BookDetails(),
+                      child: DetailCard(),
                     ),
                   ),
                 ),
@@ -106,11 +109,15 @@ class BookSearch extends SearchDelegate<Book> {
               children: results
                   .map<Widget>(
                     (b) => ListTile(
-                      onTap: () => Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (_) => ChangeNotifierProvider.value(
+                      onTap: () => Navigator.push(
+                        context,
+                        PageRouteBuilder(
+                          fullscreenDialog: true,
+                          opaque: false,
+                          pageBuilder: (_, __, ___) =>
+                              ChangeNotifierProvider.value(
                             value: b,
-                            child: BookDetails(),
+                            child: DetailCard(),
                           ),
                         ),
                       ),

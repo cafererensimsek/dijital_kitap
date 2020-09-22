@@ -6,9 +6,9 @@ class LikeButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Book book = Provider.of<Book>(context);
-    return Positioned(
-      top: MediaQuery.of(context).size.height / 6,
-      left: 2 * MediaQuery.of(context).size.width / 3 + 15,
+    return Positioned.directional(
+      textDirection: TextDirection.ltr,
+      end: 5,
       child: IconButton(
         icon: Icon(
           book.isFavorite ? Icons.favorite : Icons.favorite_border,
