@@ -1,8 +1,8 @@
 import 'package:dijital_kitap/widgets/home/all_books.dart';
 import 'package:dijital_kitap/widgets/home/favorites.dart';
-import 'package:dijital_kitap/widgets/home/profile.dart';
-import 'package:dijital_kitap/widgets/home/settings.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:dijital_kitap/screens/profile.dart';
+import 'package:dijital_kitap/screens/settings.dart';
+import 'package:flutter/material.dart';
 
 class HomeProvider with ChangeNotifier {
   int _selectedIndex = 0;

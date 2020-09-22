@@ -22,7 +22,9 @@ class BookSearch extends SearchDelegate<Book> {
     assert(context != null);
     final ThemeData theme = Theme.of(context).copyWith(
       primaryColor: color,
-      textTheme: TextTheme(headline6: TextStyle(color: Colors.white)),
+      textTheme: TextTheme(
+        headline6: TextStyle(color: Colors.white, fontSize: 18),
+      ),
       inputDecorationTheme: InputDecorationTheme(
         hintStyle: TextStyle(color: Colors.white70),
       ),
