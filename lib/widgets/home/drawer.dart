@@ -1,5 +1,10 @@
+import 'package:dijital_kitap/providers/color.dart';
+import 'package:dijital_kitap/providers/home.dart';
+import 'package:dijital_kitap/screens/auth.dart';
 import 'package:email_launcher/email_launcher.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class Cekmece extends StatelessWidget {
   void sendEmail() async {
@@ -16,6 +21,8 @@ class Cekmece extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    int index = Provider.of<HomeProvider>(context).index;
+    var color = Provider.of<Renk>(context).determineColor(index)[0];
     return Drawer(
       elevation: 5,
       child: ListView(
@@ -23,9 +30,12 @@ class Cekmece extends StatelessWidget {
           DrawerHeader(
             child: Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Text('Dijital Kitap', style: TextStyle(fontSize: 25)),
+              child: const Text(
+                'Dijital Kitap',
+                style: TextStyle(fontSize: 25),
+              ),
             ),
-            decoration: BoxDecoration(color: Colors.teal),
+            decoration: BoxDecoration(color: color),
           ),
           FlatButton(
             onPressed: () => sendEmail(),
@@ -49,6 +59,23 @@ class Cekmece extends StatelessWidget {
                 Icon(Icons.more_horiz),
                 SizedBox(width: 10),
                 Text('Hakkında'),
+              ],
+            ),
+          ),
+          FlatButton(
+            onPressed: () => FirebaseAuth.instance.signOut().then(
+                  (value) => Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Auth(),
+                      ),
+                      (route) => false),
+                ),
+            child: Row(
+              children: [
+                Icon(Icons.exit_to_app_sharp),
+                SizedBox(width: 10),
+                Text('Çıkış yap'),
               ],
             ),
           ),

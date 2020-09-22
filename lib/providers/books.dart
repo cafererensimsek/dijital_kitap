@@ -2,13 +2,10 @@ import 'package:dijital_kitap/providers/book.dart';
 import 'package:flutter/material.dart';
 
 class Books with ChangeNotifier {
-  List<Book> get books {
-    return [...bookList];
-  }
+  List<Book> get books => [...bookList];
 
-  List<Book> get getFavorites {
-    return bookList.where((element) => element.isFavorite).toList();
-  }
+  List<Book> get getFavorites =>
+      bookList.where((element) => element.isFavorite).toList();
 
   List<Book> bookList = [
     Book(

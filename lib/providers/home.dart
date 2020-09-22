@@ -7,9 +7,7 @@ import 'package:flutter/material.dart';
 class HomeProvider with ChangeNotifier {
   int _selectedIndex = 0;
 
-  int get index {
-    return _selectedIndex;
-  }
+  int get index => _selectedIndex;
 
   void toggleIndex(int index) {
     _selectedIndex = index;
