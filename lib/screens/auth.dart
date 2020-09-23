@@ -1,6 +1,4 @@
-import 'package:dijital_kitap/providers/auth.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import '../widgets/auth/auth_button.dart';
 import '../widgets/auth/email_field.dart';
 import '../widgets/auth/password_field.dart';
@@ -18,8 +16,6 @@ class Auth extends StatefulWidget {
 class _AuthState extends State<Auth> {
   @override
   Widget build(BuildContext context) {
-    print(Provider.of<Authentication>(context).email);
-    print(Provider.of<Authentication>(context).password);
     return Scaffold(
       body: StyledContainer(
         child: Stack(

@@ -31,7 +31,13 @@ class Authentication with ChangeNotifier {
     notifyListeners();
   }
 
-  void changeUser(User user) => _user = user;
+  void resetAuth() {
+    _password = null;
+    _email = null;
+    notifyListeners();
+  }
+
+  void setUser(User user) => _user = user;
 
   void signIn(BuildContext ctx) async {
     try {
@@ -39,7 +45,7 @@ class Authentication with ChangeNotifier {
         email: email,
         password: password,
       );
-      changeUser(FirebaseAuth.instance.currentUser);
+      setUser(FirebaseAuth.instance.currentUser);
       Navigator.of(ctx).pushAndRemoveUntil(
         MaterialPageRoute(
           builder: (_) => Home(),
@@ -70,7 +76,7 @@ class Authentication with ChangeNotifier {
         password: password,
       );
 
-      changeUser(FirebaseAuth.instance.currentUser);
+      setUser(FirebaseAuth.instance.currentUser);
       Navigator.of(ctx).pushAndRemoveUntil(
         MaterialPageRoute(
           builder: (_) => Home(),

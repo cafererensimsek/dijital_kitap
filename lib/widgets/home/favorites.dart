@@ -10,28 +10,25 @@ class FavoritesGrid extends StatelessWidget {
   Widget build(BuildContext context) {
     List<Book> favorites = Provider.of<Books>(context).getFavorites;
     return StyledContainer(
-      child: ChangeNotifierProvider(
-        create: (_) => Books(),
-        child: GridView.builder(
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-          ),
-          itemCount: favorites.length,
-          itemBuilder: (context, index) {
-            return ChangeNotifierProvider.value(
-              value: favorites[index],
-              child: Container(
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.transparent,
-                    width: 2,
-                  ),
-                ),
-                child: BookTile(),
-              ),
-            );
-          },
+      child: GridView.builder(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
         ),
+        itemCount: favorites.length,
+        itemBuilder: (context, index) {
+          return ChangeNotifierProvider.value(
+            value: favorites[index],
+            child: Container(
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: Colors.transparent,
+                  width: 2,
+                ),
+              ),
+              child: BookTile(),
+            ),
+          );
+        },
       ),
     );
   }

@@ -1,3 +1,4 @@
+import 'package:dijital_kitap/providers/auth.dart';
 import 'package:dijital_kitap/providers/color.dart';
 import 'package:dijital_kitap/providers/home.dart';
 import 'package:dijital_kitap/screens/auth.dart';
@@ -23,6 +24,7 @@ class Cekmece extends StatelessWidget {
   Widget build(BuildContext context) {
     int index = Provider.of<HomeProvider>(context).index;
     var color = Provider.of<Renk>(context).determineColor(index)[0];
+
     return Drawer(
       elevation: 5,
       child: ListView(
@@ -35,7 +37,8 @@ class Cekmece extends StatelessWidget {
                 style: TextStyle(fontSize: 25),
               ),
             ),
-            decoration: BoxDecoration(color: color),
+            decoration: BoxDecoration(
+                gradient: LinearGradient(colors: [color, Colors.black])),
           ),
           FlatButton(
             onPressed: () => sendEmail(),
@@ -63,14 +66,15 @@ class Cekmece extends StatelessWidget {
             ),
           ),
           FlatButton(
-            onPressed: () => FirebaseAuth.instance.signOut().then(
-                  (value) => Navigator.pushAndRemoveUntil(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => Auth(),
-                      ),
-                      (route) => false),
-                ),
+            onPressed: () => FirebaseAuth.instance.signOut().then((_) {
+              Navigator.pushAndRemoveUntil(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Auth(),
+                  ),
+                  (route) => false);
+              Provider.of<Authentication>(context, listen: false).resetAuth();
+            }),
             child: Row(
               children: [
                 Icon(Icons.exit_to_app_sharp),

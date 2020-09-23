@@ -14,17 +14,17 @@ class DijitalKitap extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider.value(
-          value: Authentication(),
+        ChangeNotifierProvider(
+          create: (ctx) => Authentication(),
         ),
-        ChangeNotifierProvider.value(
-          value: Books(),
+        ChangeNotifierProvider(
+          create: (ctx) => Books(),
         ),
-        ChangeNotifierProvider.value(
-          value: HomeProvider(),
+        ChangeNotifierProvider(
+          create: (ctx) => HomeProvider(),
         ),
-        ChangeNotifierProvider.value(
-          value: Renk(),
+        ChangeNotifierProvider(
+          create: (ctx) => Renk(),
         ),
       ],
       child: MaterialApp(

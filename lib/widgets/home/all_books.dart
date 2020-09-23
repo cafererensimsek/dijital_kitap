@@ -10,28 +10,25 @@ class BookGrid extends StatelessWidget {
   Widget build(BuildContext context) {
     List<Book> bookList = Provider.of<Books>(context).bookList;
     return StyledContainer(
-      child: ChangeNotifierProvider(
-        create: (_) => Books(),
-        child: GridView.builder(
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-          ),
-          itemCount: bookList.length,
-          itemBuilder: (context, index) {
-            return ChangeNotifierProvider.value(
-              value: bookList[index],
-              child: Container(
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.transparent,
-                    width: 2,
-                  ),
-                ),
-                child: BookTile(),
-              ),
-            );
-          },
+      child: GridView.builder(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
         ),
+        itemCount: bookList.length,
+        itemBuilder: (context, index) {
+          return ChangeNotifierProvider.value(
+            value: bookList[index],
+            child: Container(
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: Colors.transparent,
+                  width: 2,
+                ),
+              ),
+              child: BookTile(),
+            ),
+          );
+        },
       ),
     );
   }
