@@ -17,7 +17,7 @@ class HomeProvider with ChangeNotifier {
   Widget get homeBody {
     switch (index) {
       case 0:
-        return BookGrid();
+        return BooksGrid();
         break;
       case 1:
         return FavoritesGrid();

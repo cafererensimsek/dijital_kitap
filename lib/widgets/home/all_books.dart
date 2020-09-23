@@ -5,7 +5,7 @@ import 'package:dijital_kitap/widgets/home/book_grid_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class BookGrid extends StatelessWidget {
+class BooksGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Book> bookList = Provider.of<Books>(context).bookList;
@@ -18,15 +18,7 @@ class BookGrid extends StatelessWidget {
         itemBuilder: (context, index) {
           return ChangeNotifierProvider.value(
             value: bookList[index],
-            child: Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: Colors.transparent,
-                  width: 2,
-                ),
-              ),
-              child: BookTile(),
-            ),
+            child: BookGridTile(),
           );
         },
       ),

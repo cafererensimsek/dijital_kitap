@@ -5,7 +5,7 @@ import 'package:dijital_kitap/widgets/home/detail_card.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class BookTile extends StatelessWidget {
+class BookGridTile extends StatelessWidget {
   void seeDetails(BuildContext context, Book book) {
     Navigator.push(
       context,
@@ -27,12 +27,20 @@ class BookTile extends StatelessWidget {
     final Book book = Provider.of<Book>(context);
     return GestureDetector(
       onTap: () => seeDetails(context, book),
-      child: GridTile(
-        child: Padding(
-          padding: const EdgeInsets.only(bottom: 50),
-          child: Avatar(book),
+      child: Container(
+        decoration: BoxDecoration(
+          border: Border.all(
+            color: Colors.transparent,
+            width: 2,
+          ),
         ),
-        footer: BookTileBar(book),
+        child: GridTile(
+          child: Padding(
+            padding: const EdgeInsets.only(bottom: 50),
+            child: Avatar(book),
+          ),
+          footer: BookTileBar(book),
+        ),
       ),
     );
   }

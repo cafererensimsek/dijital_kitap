@@ -25,7 +25,7 @@ class FavoritesGrid extends StatelessWidget {
                   width: 2,
                 ),
               ),
-              child: BookTile(),
+              child: BookGridTile(),
             ),
           );
         },
