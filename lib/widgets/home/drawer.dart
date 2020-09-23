@@ -1,4 +1,3 @@
-import 'package:dijital_kitap/providers/auth.dart';
 import 'package:dijital_kitap/providers/color.dart';
 import 'package:dijital_kitap/providers/home.dart';
 import 'package:dijital_kitap/screens/auth.dart';
@@ -73,7 +72,6 @@ class Cekmece extends StatelessWidget {
                     builder: (context) => Auth(),
                   ),
                   (route) => false);
-              Provider.of<Authentication>(context, listen: false).resetAuth();
             }),
             child: Row(
               children: [

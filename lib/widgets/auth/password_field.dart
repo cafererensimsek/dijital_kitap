@@ -3,16 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class PasswordField extends StatelessWidget {
-  final passwordController = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
-    passwordController.addListener(
-      () => Provider.of<Authentication>(context, listen: false)
-          .changePassword(passwordController.text),
-    );
+    final TextEditingController passwordController =
+        Provider.of<Authentication>(context).passwordController;
     final double width = MediaQuery.of(context).size.width;
     final double height = MediaQuery.of(context).size.height;
+    bool isSignIn = Provider.of<Authentication>(context).isSignIn;
+    var auth = Provider.of<Authentication>(context, listen: false);
     return Positioned(
       top: 60 * height / 100 + 100,
       left: width / 15,
@@ -22,6 +20,9 @@ class PasswordField extends StatelessWidget {
         child: TextField(
           controller: passwordController,
           style: TextStyle(color: Colors.white, fontSize: 25),
+          onEditingComplete: isSignIn
+              ? () => auth.signIn(context)
+              : () => auth.signUp(context),
           decoration: InputDecoration(
             hintText: 'şifre',
             hintStyle: TextStyle(color: Colors.white70, fontSize: 25),

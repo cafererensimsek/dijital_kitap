@@ -7,33 +7,26 @@ class Authentication with ChangeNotifier {
   String _email;
   String _password;
   User _user;
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
 
   bool get isSignIn => _isSignIn;
 
-  String get email => _email;
-
-  String get password => _password;
-
   User get currentUser => _user;
+
+  TextEditingController get emailController {
+    _emailController.addListener(() => _email = _emailController.text);
+    return _emailController;
+  }
+
+  TextEditingController get passwordController {
+    _passwordController.addListener(() => _password = _passwordController.text);
+
+    return _passwordController;
+  }
 
   void switchAuth() {
     _isSignIn = !_isSignIn;
-    notifyListeners();
-  }
-
-  void changeEmail(String newEmail) {
-    _email = newEmail;
-    notifyListeners();
-  }
-
-  void changePassword(String newPassword) {
-    _password = newPassword;
-    notifyListeners();
-  }
-
-  void resetAuth() {
-    _password = null;
-    _email = null;
     notifyListeners();
   }
 
@@ -42,8 +35,8 @@ class Authentication with ChangeNotifier {
   void signIn(BuildContext ctx) async {
     try {
       await FirebaseAuth.instance.signInWithEmailAndPassword(
-        email: email,
-        password: password,
+        email: _email,
+        password: _password,
       );
       setUser(FirebaseAuth.instance.currentUser);
       Navigator.of(ctx).pushAndRemoveUntil(
@@ -55,6 +48,10 @@ class Authentication with ChangeNotifier {
     } catch (e) {
       Scaffold.of(ctx).showSnackBar(
         SnackBar(
+          backgroundColor: Colors.green[700],
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(50),
+          ),
           behavior: SnackBarBehavior.floating,
           content: Row(
             children: [
@@ -72,10 +69,9 @@ class Authentication with ChangeNotifier {
   void signUp(BuildContext ctx) async {
     try {
       await FirebaseAuth.instance.createUserWithEmailAndPassword(
-        email: email,
-        password: password,
+        email: _email,
+        password: _password,
       );
-
       setUser(FirebaseAuth.instance.currentUser);
       Navigator.of(ctx).pushAndRemoveUntil(
         MaterialPageRoute(
@@ -86,6 +82,10 @@ class Authentication with ChangeNotifier {
     } catch (e) {
       Scaffold.of(ctx).showSnackBar(
         SnackBar(
+          backgroundColor: Colors.green[700],
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(50),
+          ),
           behavior: SnackBarBehavior.floating,
           content: Row(
             children: [
