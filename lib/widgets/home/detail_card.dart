@@ -13,9 +13,9 @@ class DetailCard extends StatelessWidget {
     dynamic color = Provider.of<Renk>(context).determineColor(index)[1];
     return Padding(
       padding: EdgeInsets.fromLTRB(
-          MediaQuery.of(context).size.width / 8,
+          MediaQuery.of(context).size.width / 6,
           MediaQuery.of(context).size.height / 4,
-          MediaQuery.of(context).size.width / 8,
+          MediaQuery.of(context).size.width / 6,
           0),
       child: Material(
         color: Colors.transparent,

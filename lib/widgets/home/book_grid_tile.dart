@@ -36,7 +36,7 @@ class BookGridTile extends StatelessWidget {
         ),
         child: GridTile(
           child: Padding(
-            padding: const EdgeInsets.only(bottom: 50),
+            padding: const EdgeInsets.only(bottom: 75),
             child: Avatar(book),
           ),
           footer: BookTileBar(book),

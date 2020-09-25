@@ -19,7 +19,7 @@ class Books with ChangeNotifier {
       authorGender: "Female",
       authorAge: 23,
       avatar:
-          "https://robohash.org/liberofacereminima.png?size=100x100&set=set1",
+          "https://robohash.org/liberofacereminima.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -32,7 +32,7 @@ class Books with ChangeNotifier {
       categories: "history",
       authorGender: "Female",
       authorAge: 12,
-      avatar: "https://robohash.org/quiutconsequatur.png?size=100x100&set=set1",
+      avatar: "https://robohash.org/quiutconsequatur.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -44,7 +44,7 @@ class Books with ChangeNotifier {
       categories: "fiction",
       authorGender: "Male",
       authorAge: 71,
-      avatar: "https://robohash.org/quiaquamporro.jpg?size=100x100&set=set1",
+      avatar: "https://robohash.org/quiaquamporro.jpg?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -58,7 +58,7 @@ class Books with ChangeNotifier {
       authorGender: "Male",
       authorAge: 58,
       avatar:
-          "https://robohash.org/praesentiumadipisciconsectetur.bmp?size=100x100&set=set1",
+          "https://robohash.org/praesentiumadipisciconsectetur.bmp?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -71,7 +71,7 @@ class Books with ChangeNotifier {
       categories: "sci-fi",
       authorGender: "Male",
       authorAge: 31,
-      avatar: "https://robohash.org/ipsamdolorvel.bmp?size=100x100&set=set1",
+      avatar: "https://robohash.org/ipsamdolorvel.bmp?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -84,7 +84,7 @@ class Books with ChangeNotifier {
       authorGender: "Male",
       authorAge: 39,
       avatar:
-          "https://robohash.org/beataenesciuntdolore.jpg?size=100x100&set=set1",
+          "https://robohash.org/beataenesciuntdolore.jpg?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -97,7 +97,7 @@ class Books with ChangeNotifier {
       authorGender: "Female",
       authorAge: 32,
       avatar:
-          "https://robohash.org/delenitiodioprovident.jpg?size=100x100&set=set1",
+          "https://robohash.org/delenitiodioprovident.jpg?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -110,7 +110,7 @@ class Books with ChangeNotifier {
       categories: "utopia",
       authorGender: "Male",
       authorAge: 27,
-      avatar: "https://robohash.org/utullamvoluptas.png?size=100x100&set=set1",
+      avatar: "https://robohash.org/utullamvoluptas.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -123,7 +123,7 @@ class Books with ChangeNotifier {
       categories: "history",
       authorGender: "Female",
       authorAge: 29,
-      avatar: "https://robohash.org/eteumculpa.png?size=100x100&set=set1",
+      avatar: "https://robohash.org/eteumculpa.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -136,7 +136,7 @@ class Books with ChangeNotifier {
       categories: "fiction",
       authorGender: "Male",
       authorAge: 81,
-      avatar: "https://robohash.org/doloribusutet.png?size=100x100&set=set1",
+      avatar: "https://robohash.org/doloribusutet.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -148,7 +148,7 @@ class Books with ChangeNotifier {
       categories: "history",
       authorGender: "Female",
       authorAge: 32,
-      avatar: "https://robohash.org/nonofficiaaut.bmp?size=100x100&set=set1",
+      avatar: "https://robohash.org/nonofficiaaut.bmp?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -160,7 +160,7 @@ class Books with ChangeNotifier {
       categories: "utopia",
       authorGender: "Male",
       authorAge: 63,
-      avatar: "https://robohash.org/eaerrorest.jpg?size=100x100&set=set1",
+      avatar: "https://robohash.org/eaerrorest.jpg?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -173,7 +173,7 @@ class Books with ChangeNotifier {
       authorGender: "Female",
       authorAge: 12,
       avatar:
-          "https://robohash.org/rerummagnimaiores.jpg?size=100x100&set=set1",
+          "https://robohash.org/rerummagnimaiores.jpg?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -186,7 +186,7 @@ class Books with ChangeNotifier {
       categories: "utopia",
       authorGender: "Male",
       authorAge: 5,
-      avatar: "https://robohash.org/quaerateossed.bmp?size=100x100&set=set1",
+      avatar: "https://robohash.org/quaerateossed.bmp?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -198,7 +198,7 @@ class Books with ChangeNotifier {
       categories: "history",
       authorGender: "Male",
       authorAge: 41,
-      avatar: "https://robohash.org/magnienimvel.jpg?size=100x100&set=set1",
+      avatar: "https://robohash.org/magnienimvel.jpg?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -210,7 +210,7 @@ class Books with ChangeNotifier {
       categories: "romance",
       authorGender: "Male",
       authorAge: 27,
-      avatar: "https://robohash.org/placeatillumut.jpg?size=100x100&set=set1",
+      avatar: "https://robohash.org/placeatillumut.jpg?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -224,7 +224,7 @@ class Books with ChangeNotifier {
       authorGender: "Female",
       authorAge: 41,
       avatar:
-          "https://robohash.org/quamaperiamtempora.jpg?size=100x100&set=set1",
+          "https://robohash.org/quamaperiamtempora.jpg?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -236,7 +236,7 @@ class Books with ChangeNotifier {
       categories: "thriller",
       authorGender: "Female",
       authorAge: 29,
-      avatar: "https://robohash.org/quoquicommodi.png?size=100x100&set=set1",
+      avatar: "https://robohash.org/quoquicommodi.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -249,7 +249,7 @@ class Books with ChangeNotifier {
       authorGender: "Male",
       authorAge: 74,
       avatar:
-          "https://robohash.org/doloresquonesciunt.png?size=100x100&set=set1",
+          "https://robohash.org/doloresquonesciunt.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -261,7 +261,7 @@ class Books with ChangeNotifier {
       categories: "sci-fi",
       authorGender: "Male",
       authorAge: 35,
-      avatar: "https://robohash.org/dolornonin.bmp?size=100x100&set=set1",
+      avatar: "https://robohash.org/dolornonin.bmp?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -275,7 +275,7 @@ class Books with ChangeNotifier {
       authorGender: "Male",
       authorAge: 17,
       avatar:
-          "https://robohash.org/recusandaesuscipitnon.png?size=100x100&set=set1",
+          "https://robohash.org/recusandaesuscipitnon.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -289,7 +289,7 @@ class Books with ChangeNotifier {
       authorGender: "Male",
       authorAge: 62,
       avatar:
-          "https://robohash.org/necessitatibusquoaperiam.png?size=100x100&set=set1",
+          "https://robohash.org/necessitatibusquoaperiam.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -303,7 +303,7 @@ class Books with ChangeNotifier {
       authorGender: "Male",
       authorAge: 62,
       avatar:
-          "https://robohash.org/quoplaceataperiam.bmp?size=100x100&set=set1",
+          "https://robohash.org/quoplaceataperiam.bmp?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -317,7 +317,7 @@ class Books with ChangeNotifier {
       authorGender: "Male",
       authorAge: 76,
       avatar:
-          "https://robohash.org/architectoquineque.png?size=100x100&set=set1",
+          "https://robohash.org/architectoquineque.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -331,7 +331,7 @@ class Books with ChangeNotifier {
       authorGender: "Male",
       authorAge: 13,
       avatar:
-          "https://robohash.org/voluptatumdolorumvoluptatem.jpg?size=100x100&set=set1",
+          "https://robohash.org/voluptatumdolorumvoluptatem.jpg?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -343,7 +343,7 @@ class Books with ChangeNotifier {
       categories: "mistery",
       authorGender: "Male",
       authorAge: 35,
-      avatar: "https://robohash.org/sedmolestiasquis.png?size=100x100&set=set1",
+      avatar: "https://robohash.org/sedmolestiasquis.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -356,7 +356,7 @@ class Books with ChangeNotifier {
       categories: "thriller",
       authorGender: "Female",
       authorAge: 100,
-      avatar: "https://robohash.org/placeatsuntut.png?size=100x100&set=set1",
+      avatar: "https://robohash.org/placeatsuntut.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -368,7 +368,7 @@ class Books with ChangeNotifier {
       categories: "sci-fi",
       authorGender: "Male",
       authorAge: 25,
-      avatar: "https://robohash.org/magnametdebitis.png?size=100x100&set=set1",
+      avatar: "https://robohash.org/magnametdebitis.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -380,7 +380,7 @@ class Books with ChangeNotifier {
       categories: "romance",
       authorGender: "Female",
       authorAge: 70,
-      avatar: "https://robohash.org/totamquiodit.jpg?size=100x100&set=set1",
+      avatar: "https://robohash.org/totamquiodit.jpg?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -392,7 +392,7 @@ class Books with ChangeNotifier {
       categories: "history",
       authorGender: "Female",
       authorAge: 99,
-      avatar: "https://robohash.org/quibusdamautqui.jpg?size=100x100&set=set1",
+      avatar: "https://robohash.org/quibusdamautqui.jpg?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -405,7 +405,7 @@ class Books with ChangeNotifier {
       authorGender: "Female",
       authorAge: 35,
       avatar:
-          "https://robohash.org/etmolestiaeplaceat.jpg?size=100x100&set=set1",
+          "https://robohash.org/etmolestiaeplaceat.jpg?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -418,7 +418,7 @@ class Books with ChangeNotifier {
       authorGender: "Male",
       authorAge: 99,
       avatar:
-          "https://robohash.org/suscipitdoloremvoluptates.png?size=100x100&set=set1",
+          "https://robohash.org/suscipitdoloremvoluptates.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -432,7 +432,7 @@ class Books with ChangeNotifier {
       authorGender: "Male",
       authorAge: 20,
       avatar:
-          "https://robohash.org/beataeconsequaturlabore.png?size=100x100&set=set1",
+          "https://robohash.org/beataeconsequaturlabore.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -444,7 +444,7 @@ class Books with ChangeNotifier {
       categories: "thriller",
       authorGender: "Female",
       authorAge: 66,
-      avatar: "https://robohash.org/atfacilisearum.jpg?size=100x100&set=set1",
+      avatar: "https://robohash.org/atfacilisearum.jpg?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -457,7 +457,7 @@ class Books with ChangeNotifier {
       categories: "mistery",
       authorGender: "Male",
       authorAge: 73,
-      avatar: "https://robohash.org/quinonquasi.png?size=100x100&set=set1",
+      avatar: "https://robohash.org/quinonquasi.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -470,7 +470,7 @@ class Books with ChangeNotifier {
       categories: "romance",
       authorGender: "Female",
       authorAge: 75,
-      avatar: "https://robohash.org/nisivelaperiam.png?size=100x100&set=set1",
+      avatar: "https://robohash.org/nisivelaperiam.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -483,7 +483,7 @@ class Books with ChangeNotifier {
       categories: "thriller",
       authorGender: "Female",
       authorAge: 22,
-      avatar: "https://robohash.org/sedquaeratrerum.jpg?size=100x100&set=set1",
+      avatar: "https://robohash.org/sedquaeratrerum.jpg?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -497,7 +497,7 @@ class Books with ChangeNotifier {
       authorGender: "Male",
       authorAge: 88,
       avatar:
-          "https://robohash.org/providentnobisblanditiis.png?size=100x100&set=set1",
+          "https://robohash.org/providentnobisblanditiis.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -510,7 +510,7 @@ class Books with ChangeNotifier {
       authorGender: "Female",
       authorAge: 49,
       avatar:
-          "https://robohash.org/inventoreerrorsoluta.bmp?size=100x100&set=set1",
+          "https://robohash.org/inventoreerrorsoluta.bmp?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -523,7 +523,7 @@ class Books with ChangeNotifier {
       authorGender: "Male",
       authorAge: 74,
       avatar:
-          "https://robohash.org/reprehenderitquiain.png?size=100x100&set=set1",
+          "https://robohash.org/reprehenderitquiain.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -537,7 +537,7 @@ class Books with ChangeNotifier {
       authorGender: "Male",
       authorAge: 26,
       avatar:
-          "https://robohash.org/voluptatumdignissimosincidunt.jpg?size=100x100&set=set1",
+          "https://robohash.org/voluptatumdignissimosincidunt.jpg?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -550,7 +550,7 @@ class Books with ChangeNotifier {
       categories: "sci-fi",
       authorGender: "Female",
       authorAge: 80,
-      avatar: "https://robohash.org/quoseterror.jpg?size=100x100&set=set1",
+      avatar: "https://robohash.org/quoseterror.jpg?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -564,7 +564,7 @@ class Books with ChangeNotifier {
       authorGender: "Female",
       authorAge: 51,
       avatar:
-          "https://robohash.org/estreprehenderitvoluptatem.jpg?size=100x100&set=set1",
+          "https://robohash.org/estreprehenderitvoluptatem.jpg?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -576,7 +576,7 @@ class Books with ChangeNotifier {
       categories: "sci-fi",
       authorGender: "Female",
       authorAge: 1,
-      avatar: "https://robohash.org/nisisuntdebitis.bmp?size=100x100&set=set1",
+      avatar: "https://robohash.org/nisisuntdebitis.bmp?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -589,7 +589,7 @@ class Books with ChangeNotifier {
       categories: "romance",
       authorGender: "Male",
       authorAge: 51,
-      avatar: "https://robohash.org/iurequout.jpg?size=100x100&set=set1",
+      avatar: "https://robohash.org/iurequout.jpg?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -602,7 +602,7 @@ class Books with ChangeNotifier {
       categories: "fiction",
       authorGender: "Female",
       authorAge: 60,
-      avatar: "https://robohash.org/autemeteligendi.png?size=100x100&set=set1",
+      avatar: "https://robohash.org/autemeteligendi.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -615,7 +615,7 @@ class Books with ChangeNotifier {
       categories: "thriller",
       authorGender: "Female",
       authorAge: 37,
-      avatar: "https://robohash.org/quialiquidipsum.jpg?size=100x100&set=set1",
+      avatar: "https://robohash.org/quialiquidipsum.jpg?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -629,7 +629,7 @@ class Books with ChangeNotifier {
       authorGender: "Female",
       authorAge: 28,
       avatar:
-          "https://robohash.org/dolorumcupiditateet.jpg?size=100x100&set=set1",
+          "https://robohash.org/dolorumcupiditateet.jpg?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -643,7 +643,7 @@ class Books with ChangeNotifier {
       authorGender: "Female",
       authorAge: 44,
       avatar:
-          "https://robohash.org/liberorepellendusvero.bmp?size=100x100&set=set1",
+          "https://robohash.org/liberorepellendusvero.bmp?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -655,7 +655,7 @@ class Books with ChangeNotifier {
       categories: "history",
       authorGender: "Female",
       authorAge: 85,
-      avatar: "https://robohash.org/abipsaiusto.bmp?size=100x100&set=set1",
+      avatar: "https://robohash.org/abipsaiusto.bmp?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -668,7 +668,7 @@ class Books with ChangeNotifier {
       authorGender: "Male",
       authorAge: 96,
       avatar:
-          "https://robohash.org/perspiciatisvoluptatemquae.png?size=100x100&set=set1",
+          "https://robohash.org/perspiciatisvoluptatemquae.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -681,7 +681,7 @@ class Books with ChangeNotifier {
       categories: "romance",
       authorGender: "Male",
       authorAge: 13,
-      avatar: "https://robohash.org/quiillumid.bmp?size=100x100&set=set1",
+      avatar: "https://robohash.org/quiillumid.bmp?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -693,7 +693,7 @@ class Books with ChangeNotifier {
       categories: "utopia",
       authorGender: "Male",
       authorAge: 12,
-      avatar: "https://robohash.org/quietsunt.jpg?size=100x100&set=set1",
+      avatar: "https://robohash.org/quietsunt.jpg?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -706,7 +706,7 @@ class Books with ChangeNotifier {
       authorGender: "Female",
       authorAge: 43,
       avatar:
-          "https://robohash.org/quodtemporeveritatis.jpg?size=100x100&set=set1",
+          "https://robohash.org/quodtemporeveritatis.jpg?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -718,7 +718,7 @@ class Books with ChangeNotifier {
       categories: "thriller",
       authorGender: "Male",
       authorAge: 32,
-      avatar: "https://robohash.org/utdeseruntsit.png?size=100x100&set=set1",
+      avatar: "https://robohash.org/utdeseruntsit.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -732,7 +732,7 @@ class Books with ChangeNotifier {
       authorGender: "Male",
       authorAge: 28,
       avatar:
-          "https://robohash.org/dolorofficiadolor.bmp?size=100x100&set=set1",
+          "https://robohash.org/dolorofficiadolor.bmp?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -746,7 +746,7 @@ class Books with ChangeNotifier {
       authorGender: "Female",
       authorAge: 48,
       avatar:
-          "https://robohash.org/aperiamadipiscivero.bmp?size=100x100&set=set1",
+          "https://robohash.org/aperiamadipiscivero.bmp?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -759,7 +759,7 @@ class Books with ChangeNotifier {
       categories: "thriller",
       authorGender: "Female",
       authorAge: 26,
-      avatar: "https://robohash.org/oditdictaquo.bmp?size=100x100&set=set1",
+      avatar: "https://robohash.org/oditdictaquo.bmp?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -772,7 +772,7 @@ class Books with ChangeNotifier {
       categories: "mistery",
       authorGender: "Female",
       authorAge: 70,
-      avatar: "https://robohash.org/etutnemo.jpg?size=100x100&set=set1",
+      avatar: "https://robohash.org/etutnemo.jpg?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -786,7 +786,7 @@ class Books with ChangeNotifier {
       authorGender: "Male",
       authorAge: 49,
       avatar:
-          "https://robohash.org/odioidrepudiandae.png?size=100x100&set=set1",
+          "https://robohash.org/odioidrepudiandae.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -799,7 +799,7 @@ class Books with ChangeNotifier {
       authorGender: "Male",
       authorAge: 13,
       avatar:
-          "https://robohash.org/doloremtemporibusdolores.png?size=100x100&set=set1",
+          "https://robohash.org/doloremtemporibusdolores.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -813,7 +813,7 @@ class Books with ChangeNotifier {
       authorGender: "Male",
       authorAge: 80,
       avatar:
-          "https://robohash.org/etplaceatnesciunt.bmp?size=100x100&set=set1",
+          "https://robohash.org/etplaceatnesciunt.bmp?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -826,7 +826,7 @@ class Books with ChangeNotifier {
       authorGender: "Female",
       authorAge: 21,
       avatar:
-          "https://robohash.org/impeditaspernaturet.png?size=100x100&set=set1",
+          "https://robohash.org/impeditaspernaturet.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -840,7 +840,7 @@ class Books with ChangeNotifier {
       authorGender: "Female",
       authorAge: 82,
       avatar:
-          "https://robohash.org/molestiaeametquia.jpg?size=100x100&set=set1",
+          "https://robohash.org/molestiaeametquia.jpg?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -853,7 +853,7 @@ class Books with ChangeNotifier {
       categories: "romance",
       authorGender: "Female",
       authorAge: 92,
-      avatar: "https://robohash.org/maioresetmaxime.png?size=100x100&set=set1",
+      avatar: "https://robohash.org/maioresetmaxime.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -867,7 +867,7 @@ class Books with ChangeNotifier {
       authorGender: "Male",
       authorAge: 18,
       avatar:
-          "https://robohash.org/pariaturvoluptateset.png?size=100x100&set=set1",
+          "https://robohash.org/pariaturvoluptateset.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -880,7 +880,7 @@ class Books with ChangeNotifier {
       authorGender: "Female",
       authorAge: 99,
       avatar:
-          "https://robohash.org/etoptioconsequatur.jpg?size=100x100&set=set1",
+          "https://robohash.org/etoptioconsequatur.jpg?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -893,7 +893,7 @@ class Books with ChangeNotifier {
       authorGender: "Female",
       authorAge: 57,
       avatar:
-          "https://robohash.org/eiusquiaassumenda.jpg?size=100x100&set=set1",
+          "https://robohash.org/eiusquiaassumenda.jpg?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -906,7 +906,7 @@ class Books with ChangeNotifier {
       categories: "romance",
       authorGender: "Male",
       authorAge: 71,
-      avatar: "https://robohash.org/nostrumquodrerum.bmp?size=100x100&set=set1",
+      avatar: "https://robohash.org/nostrumquodrerum.bmp?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -919,7 +919,7 @@ class Books with ChangeNotifier {
       authorGender: "Female",
       authorAge: 80,
       avatar:
-          "https://robohash.org/sitdistinctioillo.png?size=100x100&set=set1",
+          "https://robohash.org/sitdistinctioillo.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -931,7 +931,7 @@ class Books with ChangeNotifier {
       categories: "fiction",
       authorGender: "Female",
       authorAge: 2,
-      avatar: "https://robohash.org/quosquiaet.png?size=100x100&set=set1",
+      avatar: "https://robohash.org/quosquiaet.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -944,7 +944,7 @@ class Books with ChangeNotifier {
       categories: "mistery",
       authorGender: "Male",
       authorAge: 64,
-      avatar: "https://robohash.org/sitsimiliquemodi.bmp?size=100x100&set=set1",
+      avatar: "https://robohash.org/sitsimiliquemodi.bmp?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -957,7 +957,7 @@ class Books with ChangeNotifier {
       categories: "romance",
       authorGender: "Female",
       authorAge: 33,
-      avatar: "https://robohash.org/autetamet.bmp?size=100x100&set=set1",
+      avatar: "https://robohash.org/autetamet.bmp?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -971,7 +971,7 @@ class Books with ChangeNotifier {
       authorGender: "Female",
       authorAge: 84,
       avatar:
-          "https://robohash.org/nobisassumendanisi.bmp?size=100x100&set=set1",
+          "https://robohash.org/nobisassumendanisi.bmp?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -983,7 +983,7 @@ class Books with ChangeNotifier {
       categories: "thriller",
       authorGender: "Female",
       authorAge: 6,
-      avatar: "https://robohash.org/eaaliquidaut.jpg?size=100x100&set=set1",
+      avatar: "https://robohash.org/eaaliquidaut.jpg?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -997,7 +997,7 @@ class Books with ChangeNotifier {
       authorGender: "Male",
       authorAge: 31,
       avatar:
-          "https://robohash.org/necessitatibusquisquamiste.jpg?size=100x100&set=set1",
+          "https://robohash.org/necessitatibusquisquamiste.jpg?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -1010,7 +1010,7 @@ class Books with ChangeNotifier {
       categories: "mistery",
       authorGender: "Female",
       authorAge: 67,
-      avatar: "https://robohash.org/ipsumetrerum.png?size=100x100&set=set1",
+      avatar: "https://robohash.org/ipsumetrerum.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -1024,7 +1024,7 @@ class Books with ChangeNotifier {
       authorGender: "Female",
       authorAge: 99,
       avatar:
-          "https://robohash.org/doloresplaceatquis.bmp?size=100x100&set=set1",
+          "https://robohash.org/doloresplaceatquis.bmp?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -1037,7 +1037,7 @@ class Books with ChangeNotifier {
       authorGender: "Male",
       authorAge: 64,
       avatar:
-          "https://robohash.org/autemperferendisut.bmp?size=100x100&set=set1",
+          "https://robohash.org/autemperferendisut.bmp?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -1051,7 +1051,7 @@ class Books with ChangeNotifier {
       authorGender: "Male",
       authorAge: 32,
       avatar:
-          "https://robohash.org/nihillaudantiumet.bmp?size=100x100&set=set1",
+          "https://robohash.org/nihillaudantiumet.bmp?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -1064,7 +1064,7 @@ class Books with ChangeNotifier {
       categories: "history",
       authorGender: "Male",
       authorAge: 32,
-      avatar: "https://robohash.org/quisquamnamest.jpg?size=100x100&set=set1",
+      avatar: "https://robohash.org/quisquamnamest.jpg?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -1077,7 +1077,7 @@ class Books with ChangeNotifier {
       authorGender: "Female",
       authorAge: 87,
       avatar:
-          "https://robohash.org/veldeseruntdebitis.bmp?size=100x100&set=set1",
+          "https://robohash.org/veldeseruntdebitis.bmp?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -1089,7 +1089,7 @@ class Books with ChangeNotifier {
       categories: "mistery",
       authorGender: "Male",
       authorAge: 98,
-      avatar: "https://robohash.org/eumquasmagni.png?size=100x100&set=set1",
+      avatar: "https://robohash.org/eumquasmagni.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -1102,7 +1102,7 @@ class Books with ChangeNotifier {
       categories: "romance",
       authorGender: "Male",
       authorAge: 70,
-      avatar: "https://robohash.org/nesciuntnemoaut.png?size=100x100&set=set1",
+      avatar: "https://robohash.org/nesciuntnemoaut.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -1115,7 +1115,7 @@ class Books with ChangeNotifier {
       authorGender: "Female",
       authorAge: 76,
       avatar:
-          "https://robohash.org/utenimdignissimos.png?size=100x100&set=set1",
+          "https://robohash.org/utenimdignissimos.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -1128,7 +1128,7 @@ class Books with ChangeNotifier {
       categories: "fiction",
       authorGender: "Female",
       authorAge: 78,
-      avatar: "https://robohash.org/utdictahic.png?size=100x100&set=set1",
+      avatar: "https://robohash.org/utdictahic.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -1142,7 +1142,7 @@ class Books with ChangeNotifier {
       authorGender: "Female",
       authorAge: 40,
       avatar:
-          "https://robohash.org/voluptatemvoluptasaccusantium.png?size=100x100&set=set1",
+          "https://robohash.org/voluptatemvoluptasaccusantium.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -1154,7 +1154,7 @@ class Books with ChangeNotifier {
       categories: "thriller",
       authorGender: "Male",
       authorAge: 4,
-      avatar: "https://robohash.org/nonrerumvel.png?size=100x100&set=set1",
+      avatar: "https://robohash.org/nonrerumvel.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -1168,7 +1168,7 @@ class Books with ChangeNotifier {
       authorGender: "Female",
       authorAge: 94,
       avatar:
-          "https://robohash.org/perferendisquostemporibus.jpg?size=100x100&set=set1",
+          "https://robohash.org/perferendisquostemporibus.jpg?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -1181,7 +1181,7 @@ class Books with ChangeNotifier {
       categories: "romance",
       authorGender: "Female",
       authorAge: 24,
-      avatar: "https://robohash.org/optioestofficiis.jpg?size=100x100&set=set1",
+      avatar: "https://robohash.org/optioestofficiis.jpg?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -1195,7 +1195,7 @@ class Books with ChangeNotifier {
       authorGender: "Male",
       authorAge: 30,
       avatar:
-          "https://robohash.org/voluptatibusconsequaturdolores.bmp?size=100x100&set=set1",
+          "https://robohash.org/voluptatibusconsequaturdolores.bmp?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -1208,7 +1208,7 @@ class Books with ChangeNotifier {
       authorGender: "Female",
       authorAge: 14,
       avatar:
-          "https://robohash.org/voluptatumaliquidenim.bmp?size=100x100&set=set1",
+          "https://robohash.org/voluptatumaliquidenim.bmp?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -1221,7 +1221,7 @@ class Books with ChangeNotifier {
       authorGender: "Female",
       authorAge: 3,
       avatar:
-          "https://robohash.org/recusandaealiaseum.jpg?size=100x100&set=set1",
+          "https://robohash.org/recusandaealiaseum.jpg?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -1235,7 +1235,7 @@ class Books with ChangeNotifier {
       authorGender: "Female",
       authorAge: 90,
       avatar:
-          "https://robohash.org/seddignissimossint.jpg?size=100x100&set=set1",
+          "https://robohash.org/seddignissimossint.jpg?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -1249,7 +1249,7 @@ class Books with ChangeNotifier {
       authorGender: "Female",
       authorAge: 14,
       avatar:
-          "https://robohash.org/recusandaealiasqui.bmp?size=100x100&set=set1",
+          "https://robohash.org/recusandaealiasqui.bmp?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -1263,7 +1263,7 @@ class Books with ChangeNotifier {
       authorGender: "Male",
       authorAge: 34,
       avatar:
-          "https://robohash.org/explicabodoloreos.png?size=100x100&set=set1",
+          "https://robohash.org/explicabodoloreos.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -1276,7 +1276,7 @@ class Books with ChangeNotifier {
       authorGender: "Female",
       authorAge: 73,
       avatar:
-          "https://robohash.org/cumqueasperioresdignissimos.png?size=100x100&set=set1",
+          "https://robohash.org/cumqueasperioresdignissimos.png?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -1288,7 +1288,7 @@ class Books with ChangeNotifier {
       categories: "history",
       authorGender: "Female",
       authorAge: 47,
-      avatar: "https://robohash.org/quiautin.bmp?size=100x100&set=set1",
+      avatar: "https://robohash.org/quiautin.bmp?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -1301,7 +1301,7 @@ class Books with ChangeNotifier {
       categories: "mistery",
       authorGender: "Female",
       authorAge: 45,
-      avatar: "https://robohash.org/laboretemporeut.jpg?size=100x100&set=set1",
+      avatar: "https://robohash.org/laboretemporeut.jpg?size=150x150&set=set1",
       isFavorite: false,
     ),
     Book(
@@ -1315,7 +1315,7 @@ class Books with ChangeNotifier {
       authorGender: "Male",
       authorAge: 75,
       avatar:
-          "https://robohash.org/consecteturquireprehenderit.png?size=100x100&set=set1",
+          "https://robohash.org/consecteturquireprehenderit.png?size=150x150&set=set1",
       isFavorite: false,
     ),
   ];
