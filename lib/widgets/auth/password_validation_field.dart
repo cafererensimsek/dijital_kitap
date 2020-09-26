@@ -2,31 +2,26 @@ import '../../providers/auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class PasswordField extends StatelessWidget {
-  final double top;
-
-  PasswordField({this.top});
-
+class PasswordValidationField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final TextEditingController passwordController =
-        Provider.of<Authentication>(context).passwordController;
+    final TextEditingController passwordCheckController =
+        Provider.of<Authentication>(context).passwordCheckController;
     final double width = MediaQuery.of(context).size.width;
     final double height = MediaQuery.of(context).size.height;
-    bool isSignIn = Provider.of<Authentication>(context).isSignIn;
     var auth = Provider.of<Authentication>(context, listen: false);
     return Positioned(
-      top: 60 * height / 100 + top,
+      top: 60 * height / 100 + 120,
       left: width / 15,
       width: width,
       child: Container(
         margin: EdgeInsets.fromLTRB(width / 5, 0, width / 5, 0),
         child: TextField(
-          controller: passwordController,
+          controller: passwordCheckController,
           style: TextStyle(color: Colors.white, fontSize: 25),
-          onEditingComplete: isSignIn ? () => auth.signIn(context) : null,
+          onEditingComplete: () => auth.signUp(context),
           decoration: InputDecoration(
-            hintText: 'şifre',
+            hintText: 'şifreyi doğrula',
             hintStyle: TextStyle(color: Colors.white70, fontSize: 25),
             border: InputBorder.none,
             isDense: true,

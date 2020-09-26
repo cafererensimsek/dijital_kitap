@@ -6,9 +6,12 @@ class Authentication with ChangeNotifier {
   bool _isSignIn = true;
   String _email;
   String _password;
+  String _passwordCheck;
   User _user;
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _passwordCheckController =
+      TextEditingController();
 
   bool get isSignIn => _isSignIn;
 
@@ -23,6 +26,13 @@ class Authentication with ChangeNotifier {
     _passwordController.addListener(() => _password = _passwordController.text);
 
     return _passwordController;
+  }
+
+  TextEditingController get passwordCheckController {
+    _passwordCheckController
+        .addListener(() => _passwordCheck = _passwordCheckController.text);
+
+    return _passwordCheckController;
   }
 
   void switchAuth() {
@@ -68,6 +78,27 @@ class Authentication with ChangeNotifier {
 
   void signUp(BuildContext ctx) async {
     try {
+      if (_password != _passwordCheck) {
+        Scaffold.of(ctx).showSnackBar(
+          SnackBar(
+            backgroundColor: Colors.green[700],
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(50),
+            ),
+            behavior: SnackBarBehavior.floating,
+            content: Row(
+              children: [
+                Icon(Icons.error),
+                SizedBox(width: 30),
+                Flexible(
+                  child: Text('Şifreler eşleşmiyor!'),
+                ),
+              ],
+            ),
+          ),
+        );
+        return;
+      }
       await FirebaseAuth.instance.createUserWithEmailAndPassword(
         email: _email,
         password: _password,
